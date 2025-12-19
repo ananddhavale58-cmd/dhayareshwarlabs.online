@@ -1,77 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
   <meta charset="UTF-8">
-  <title>Dhayareshwar Labs | Environmental Testing & Monitoring</title>
-  <meta name="description" content="Dhayareshwar Labs provides environmental testing, air quality monitoring and pollution control solutions.">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
+  <title>Dhayareshwar Labs</title>
+  <meta name="description" content="Dhayareshwar Labs - Environmental Testing, Air Quality Monitoring, OCEMS Solutions">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<style>
-body {
-  font-family: Arial, sans-serif;
-  background: #f5f5f5;
-  margin: 0;
-  padding: 0;
-}
-.container {
-  max-width: 600px;
-  margin: 30px auto;
-  background: #ffffff;
-  padding: 20px;
-  border-radius: 8px;
-}
-h1, h2 {
-  text-align: center;
-}
-input, textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 8px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-button {
-  width: 100%;
-  background: #25D366;
-  color: #ffffff;
-  padding: 12px;
-  border: none;
-  font-size: 16px;
-  border-radius: 5px;
-  cursor: pointer;
-}
-button:hover {
-  background: #1ebc59;
-}
-.footer {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 14px;
-}
-</style>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f2f2f2;
+      margin: 0;
+      padding: 0;
+    }
+    .box {
+      max-width: 600px;
+      background: #ffffff;
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 6px;
+    }
+    .logo {
+      text-align: center;
+    }
+    .logo img {
+      max-width: 120px;
+    }
+    h1, h2 {
+      text-align: center;
+      color: #333;
+    }
+    p {
+      text-align: center;
+      color: #555;
+      line-height: 1.6;
+    }
+    ul {
+      padding-left: 20px;
+      color: #555;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 6px 0;
+      border: 1px solid #ccc;
+    }
+    button {
+      width: 100%;
+      padding: 12px;
+      background: #25D366;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .contact {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+  </style>
+</head>
 
 <body>
 
-<div class="container">
+<div class="box">
+
+  <!-- LOGO -->
+  <div class="logo">
+    <!-- Logo image upload करून नाव बदला -->
+    <img src="logo.png" alt="Dhayareshwar Labs Logo">
+  </div>
+
   <h1>Dhayareshwar Labs</h1>
-  <p style="text-align:center;">
-    Environmental Testing & Air Quality Monitoring Services
+  <p>Environmental Testing & Air Quality Monitoring Services</p>
+
+  <!-- ABOUT US -->
+  <h2>About Us</h2>
+  <p>
+    Dhayareshwar Labs provides reliable environmental testing and monitoring
+    solutions to industries. We help organizations comply with MPCB, CPCB
+    and environmental norms using accurate data and modern technology.
   </p>
 
+  <!-- SERVICES -->
+  <h2>Our Services</h2>
+  <ul>
+    <li>Ambient Air Quality Monitoring (AQMS)</li>
+    <li>OCEMS Installation & Support</li>
+    <li>Stack & Emission Monitoring</li>
+    <li>Water & Wastewater Testing</li>
+    <li>Environmental Compliance Support</li>
+    <li>LED AQI Display Boards</li>
+  </ul>
+
+  <!-- WHATSAPP FORM -->
   <h2>Contact Us on WhatsApp</h2>
 
   <form onsubmit="sendWhatsApp(); return false;">
     <input type="text" id="name" placeholder="Your Name" required>
     <input type="text" id="mobile" placeholder="Mobile Number" required>
-    <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+    <textarea id="message" placeholder="Your Message" required></textarea>
     <button type="submit">Send on WhatsApp</button>
   </form>
 
-  <div class="footer">
+  <!-- CONTACT INFO -->
+  <div class="contact">
     📧 info@dhayareshwarlabs.online <br>
-    📞 +91 98603 34224 
+    📞 +91 94041 30994
   </div>
+
 </div>
 
 <script>
@@ -80,15 +118,14 @@ function sendWhatsApp() {
   var mobile = document.getElementById("mobile").value;
   var message = document.getElementById("message").value;
 
-  var phone = "919860334224"; // WhatsApp number (91 + number)
+  var phone = "919404130994"; // WhatsApp number
 
-  var text = 
+  var text =
     "Name: " + name +
     "%0AMobile: " + mobile +
     "%0AMessage: " + message;
 
-  var url = "https://wa.me/" + phone + "?text=" + text;
-  window.open(url, "_blank");
+  window.open("https://wa.me/" + phone + "?text=" + text, "_blank");
 }
 </script>
 
