@@ -2,85 +2,95 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dhayareshwar Labs</title>
+  <title>Dhayareshwar Labs | Environmental Testing & Monitoring</title>
+  <meta name="description" content="Dhayareshwar Labs provides environmental testing, air quality monitoring and pollution control solutions.">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Dhayareshwar Labs - Environmental Testing and Air Quality Monitoring Services">
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      background: #f4f6f8;
-    }
-    header {
-      background: #0b5ed7;
-      color: #fff;
-      padding: 20px;
-      text-align: center;
-    }
-    section {
-      padding: 20px;
-      background: #fff;
-      margin: 15px;
-      border-radius: 6px;
-    }
-    footer {
-      background: #222;
-      color: #fff;
-      text-align: center;
-      padding: 10px;
-      font-size: 14px;
-    }
-    .btn {
-      display: inline-block;
-      padding: 10px 15px;
-      background: #25d366;
-      color: white;
-      text-decoration: none;
-      border-radius: 4px;
-      margin-top: 10px;
-    }
-  </style>
 </head>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width: 600px;
+  margin: 30px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+}
+h1, h2 {
+  text-align: center;
+}
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+button {
+  width: 100%;
+  background: #25D366;
+  color: #ffffff;
+  padding: 12px;
+  border: none;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+button:hover {
+  background: #1ebc59;
+}
+.footer {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+}
+</style>
 
 <body>
 
-<header>
+<div class="container">
   <h1>Dhayareshwar Labs</h1>
-  <p>Environmental Testing & Air Quality Monitoring</p>
-</header>
-
-<section>
-  <h2>About Us</h2>
-  <p>
-    Dhayareshwar Labs provides reliable environmental testing, air quality
-    monitoring and compliance-related laboratory services for industries
-    and organizations.
+  <p style="text-align:center;">
+    Environmental Testing & Air Quality Monitoring Services
   </p>
-</section>
 
-<section>
-  <h2>Our Services</h2>
-  <ul>
-    <li>Ambient Air Quality Monitoring</li>
-    <li>Environmental Testing</li>
-    <li>Compliance & Reporting Support</li>
-    <li>OCEMS / AQ Monitoring Solutions</li>
-  </ul>
-</section>
+  <h2>Contact Us on WhatsApp</h2>
 
-<section>
-  <h2>Contact Us</h2>
-  <p>
-    📞 Mobile: 9XXXXXXXXX <br>
-    📧 Email: info@dhayareshwarlabs.online <br>
-    📍 Location: Maharashtra, India
-  </p>
-  <a class="btn" href="https://wa.me/91XXXXXXXXXX">WhatsApp Us</a>
-</section>
+  <form onsubmit="sendWhatsApp(); return false;">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="text" id="mobile" placeholder="Mobile Number" required>
+    <textarea id="message" placeholder="Your Message" rows="4" required></textarea>
+    <button type="submit">Send on WhatsApp</button>
+  </form>
 
-<footer>
-  © 2025 Dhayareshwar Labs. All Rights Reserved.
-</footer>
+  <div class="footer">
+    📧 info@dhayareshwarlabs.online <br>
+    📞 +91 98603 34224 
+  </div>
+</div>
+
+<script>
+function sendWhatsApp() {
+  var name = document.getElementById("name").value;
+  var mobile = document.getElementById("mobile").value;
+  var message = document.getElementById("message").value;
+
+  var phone = "919860334224"; // WhatsApp number (91 + number)
+
+  var text = 
+    "Name: " + name +
+    "%0AMobile: " + mobile +
+    "%0AMessage: " + message;
+
+  var url = "https://wa.me/" + phone + "?text=" + text;
+  window.open(url, "_blank");
+}
+</script>
 
 </body>
 </html>
