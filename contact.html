@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Contact | Dhayareshwar Labs</title>
+
+<style>
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4;
+}
+
+.container {
+  max-width: 500px;
+  background: #ffffff;
+  margin: 40px auto;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+h2 {
+  text-align: center;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+button {
+  width: 100%;
+  background: #2c3e50;
+  color: #fff;
+  padding: 10px;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+button:hover {
+  background: #1a252f;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>Contact Us</h2>
+
+<form action="mailto:info@dhayareshwarlabs.online" method="post" enctype="text/plain">
+  
+  <input type="text" name="Name" placeholder="Your Name" required>
+
+  <input type="email" name="Email" placeholder="Your Email" required>
+
+  <input type="text" name="Phone" placeholder="Mobile Number">
+
+  <textarea name="Message" rows="4" placeholder="Your Message"></textarea>
+
+  <button type="submit">Send Email</button>
+</form>
+
+<p style="text-align:center;margin-top:15px;">
+<a href="index.html">← Back to Home</a>
+</p>
+
+</div>
+
+</body>
+</html>
