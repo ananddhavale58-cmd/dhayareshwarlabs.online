@@ -1,56 +1,87 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>Dhayareshwar Labs</title>
-  <meta name="description" content="Dhayareshwar Labs - Environmental Testing, Air Quality Monitoring, OCEMS Solutions">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
     body {
-      font-family: Arial, sans-serif;
-      background: #f2f2f2;
       margin: 0;
       padding: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
     }
-    .box {
-      max-width: 600px;
-      background: #ffffff;
+
+    .container {
+      max-width: 900px;
       margin: 20px auto;
+      background: #ffffff;
       padding: 20px;
-      border-radius: 6px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
     }
+
+    .logo {
+      text-align: center;
+      margin-bottom: 15px;
+    }
+
+    .logo img {
+      max-width: 160px;
+      height: auto;
+      display: inline-block;
+    }
+
     h1, h2 {
       text-align: center;
-      color: #333;
+      color: #2c3e50;
     }
+
     p {
       text-align: center;
       color: #555;
       line-height: 1.6;
     }
-    ul {
-      padding-left: 20px;
-      color: #555;
+
+    .services {
+      margin-top: 25px;
     }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin: 6px 0;
-      border: 1px solid #ccc;
-    }
-    button {
-      width: 100%;
-      padding: 12px;
-      background: #25D366;
-      color: white;
-      border: none;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    .contact {
+
+    .services ul {
+      list-style: none;
+      padding: 0;
       text-align: center;
-      margin-top: 15px;
+    }
+
+    .services li {
+      padding: 6px 0;
+      color: #333;
+    }
+
+    .whatsapp {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .whatsapp a {
+      background: #25d366;
+      color: #ffffff;
+      padding: 12px 22px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .whatsapp a:hover {
+      background: #1ebe5d;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 30px;
+      color: #777;
       font-size: 14px;
     }
   </style>
@@ -58,71 +89,50 @@
 
 <body>
 
-<div class="box">
+  <div class="container">
 
-  <!-- LOGO -->
-  <div class="logo">
-  <img
-    src="data:image/jpeg;base64,/9j/4QGpRXhpZgAATU0AKgAAAAgABgEAAAMAAAABBDgAAAEBAAMAAAABCWgAAAExAAIAAAAmAAAAVodpAAQAAAABAAAAkAESAAMA..."
-    alt="Dhayareshwar Labs Logo">
-</div>
+    <!-- LOGO -->
+    <div class="logo">
+      <img src="Logo.jpg" alt="Dhayareshwar Labs Logo">
+    </div>
 
-  <h1>Dhayareshwar Labs</h1>
-  <p>Environmental Testing & Air Quality Monitoring Services</p>
+    <!-- TITLE -->
+    <h1>Dhayareshwar Labs</h1>
+    <p>Environmental Testing & Monitoring Solutions</p>
 
-  <!-- ABOUT US -->
-  <h2>About Us</h2>
-  <p>
-    Dhayareshwar Labs provides reliable environmental testing and monitoring
-    solutions to industries. We help organizations comply with MPCB, CPCB
-    and environmental norms using accurate data and modern technology.
-  </p>
+    <!-- ABOUT -->
+    <h2>About Us</h2>
+    <p>
+      Dhayareshwar Labs provides reliable environmental monitoring,
+      air quality analysis, and compliance support for industries
+      as per MPCB / CPCB guidelines.
+    </p>
 
-  <!-- SERVICES -->
-  <h2>Our Services</h2>
-  <ul>
-    <li>Ambient Air Quality Monitoring (AQMS)</li>
-    <li>OCEMS Installation & Support</li>
-    <li>Stack & Emission Monitoring</li>
-    <li>Water & Wastewater Testing</li>
-    <li>Environmental Compliance Support</li>
-    <li>LED AQI Display Boards</li>
-  </ul>
+    <!-- SERVICES -->
+    <div class="services">
+      <h2>Our Services</h2>
+      <ul>
+        <li>Ambient Air Quality Monitoring AQI</li>
+        <li>OCEMS & AQMS Software Support</li>
+        <li>Stack & Emission Monitoring online Sensor</li>
+        <li>Environmental Compliance Consulting MPCB</li>
+        <li>Report Generation & Data Analysis</li>
+        <li>Led display AQI & Data Support</li>
+      </ul>
+    </div>
 
-  <!-- WHATSAPP FORM -->
-  <h2>Contact Us on WhatsApp</h2>
+    <!-- WHATSAPP -->
+    <div class="whatsapp">
+      <a href="https://wa.me/919860334224" target="_blank">
+        Contact on WhatsApp
+      </a>
+    </div>
 
-  <form onsubmit="sendWhatsApp(); return false;">
-    <input type="text" id="name" placeholder="Your Name" required>
-    <input type="text" id="mobile" placeholder="Mobile Number" required>
-    <textarea id="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send on WhatsApp</button>
-  </form>
+    <footer>
+      © 2025 Dhayareshwar Labs. All rights reserved.
+    </footer>
 
-  <!-- CONTACT INFO -->
-  <div class="contact">
-    📧 info@dhayareshwarlabs.online <br>
-    📞 +91 94041 30994
   </div>
-
-</div>
-
-<script>
-function sendWhatsApp() {
-  var name = document.getElementById("name").value;
-  var mobile = document.getElementById("mobile").value;
-  var message = document.getElementById("message").value;
-
-  var phone = "919404130994"; // WhatsApp number
-
-  var text =
-    "Name: " + name +
-    "%0AMobile: " + mobile +
-    "%0AMessage: " + message;
-
-  window.open("https://wa.me/" + phone + "?text=" + text, "_blank");
-}
-</script>
 
 </body>
 </html>
