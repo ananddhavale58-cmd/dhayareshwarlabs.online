@@ -6,6 +6,79 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: #f4f6f8;
+}
+
+.container {
+  max-width: 900px;
+  margin: 20px auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.08);
+}
+
+.logo {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.logo img {
+  max-width: 160px;
+  height: auto;
+}
+
+/* NAVBAR */
+.navbar {
+  background: #2c3e50;
+  padding: 12px 0;
+}
+
+.nav-container {
+  max-width: 900px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+}
+
+.nav-logo a {
+  color: #fff;
+  font-size: 20px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  margin-left: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+}
+
+@media (max-width: 600px) {
+  .nav-container {
+    flex-direction: column;
+  }
+  .nav-links li {
+    margin: 8px 0;
+  }
+}
+    
     body {
       margin: 0;
       padding: 0;
@@ -88,6 +161,18 @@
 </head>
 
 <body>
+  <nav class="navbar">
+  <div class="nav-container">
+    <div class="nav-logo">
+      <a href="index.html">Dhayareshwar Labs</a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</nav>
 
   <div class="container">
 
