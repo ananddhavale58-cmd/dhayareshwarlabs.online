@@ -15,23 +15,44 @@
       font-family: Arial, sans-serif;
       background: #f4f6f8;
     }
+    /* ===== NAVBAR ===== */
+.navbar {
+  background: #2c3e50;
+  padding: 12px 0;
+}
 
-    .navbar {
-      background: #2c3e50;
-      padding: 12px;
-      text-align: center;
-    }
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;              /* IMPORTANT */
+  justify-content: center;    /* horizontal */
+  gap: 25px;
+}
 
-    .navbar a {
-      color: #fff;
-      margin: 0 15px;
-      text-decoration: none;
-      font-weight: bold;
-    }
+.navbar ul li {
+  display: inline-block;
+}
 
-    .navbar a:hover {
-      text-decoration: underline;
-    }
+.navbar ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.navbar ul li a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile view */
+@media (max-width: 600px) {
+  .navbar ul {
+    flex-direction: row;   /* STILL horizontal */
+    flex-wrap: wrap;
+    gap: 15px;
+  }
+}
 
 /* CONTAINER */
 .container{
