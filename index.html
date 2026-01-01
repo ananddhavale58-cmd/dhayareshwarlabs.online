@@ -1,25 +1,184 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Test</title>
+<title>Dhayareshwar Labs | AQI, AQMS, OCEMS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
-body {
-  background: #f4f6f8;
-  font-family: Arial;
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f4f6f8;
 }
-h1 {
-  color: green;
-  text-align: center;
+
+/* NAVBAR */
+.navbar{
+  background:#2c3e50;
+}
+.navbar ul{
+  list-style:none;
+  margin:0;
+  padding:10px;
+  display:flex;
+  justify-content:center;
+  gap:25px;
+}
+.navbar a{
+  color:#fff;
+  text-decoration:none;
+  font-weight:bold;
+}
+.navbar a:hover{
+  text-decoration:underline;
+}
+
+/* CONTAINER */
+.container{
+  max-width:1000px;
+  margin:20px auto;
+  background:#fff;
+  padding:20px;
+  border-radius:8px;
+  box-shadow:0 0 10px rgba(0,0,0,0.08);
+}
+
+.logo{
+  text-align:center;
+}
+.logo img{
+  max-width:150px;
+}
+
+/* PRODUCTS */
+.products{
+  margin-top:30px;
+}
+.product-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+  gap:20px;
+}
+.product-card{
+  border:1px solid #ddd;
+  padding:15px;
+  border-radius:6px;
+  text-align:center;
+}
+.product-card img{
+  width:100%;
+  max-height:140px;
+  object-fit:contain;
+}
+.price{
+  color:green;
+  font-weight:bold;
+  margin-top:8px;
+}
+
+/* BUTTON */
+.whatsapp{
+  text-align:center;
+  margin-top:30px;
+}
+.whatsapp a{
+  background:#25d366;
+  color:#fff;
+  padding:12px 22px;
+  border-radius:6px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+/* FOOTER */
+footer{
+  text-align:center;
+  margin-top:30px;
+  color:#777;
+  font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+  .navbar ul{
+    flex-wrap:wrap;
+  }
 }
 </style>
-
 </head>
 
 <body>
 
-<h1>CSS OK – TEXT NOT VISIBLE</h1>
+<!-- NAVIGATION -->
+<div class="navbar">
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="products.html">Products</a></li>
+    <li><a href="services.html">Services</a></li>
+    <li><a href="contact.html">Contact</a></li>
+  </ul>
+</div>
 
+<div class="container">
+
+<!-- LOGO -->
+<div class="logo">
+  <img src="Logo.jpg" alt="Dhayareshwar Labs">
+</div>
+
+<h1 style="text-align:center;">Dhayareshwar Labs</h1>
+<p style="text-align:center;">
+Environmental Monitoring • AQI • AQMS • OCEMS Solutions
+</p>
+
+<!-- PRODUCTS -->
+<div class="products">
+<h2 style="text-align:center;">Our Products</h2>
+
+<div class="product-grid">
+
+<div class="product-card">
+  <img src="aqi.png" alt="AQI Monitoring System">
+  <h3>AQI Monitoring System</h3>
+  <p>Real-time PM2.5, PM10 monitoring with cloud dashboard & CPCB format reports.</p>
+  <div class="price">₹1,20,000+</div>
+</div>
+
+<div class="product-card">
+  <img src="ocems.png" alt="OCEMS System">
+  <h3>OCEMS System</h3>
+  <p>Online Continuous Emission Monitoring System as per MPCB / CPCB norms.</p>
+  <div class="price">₹3,50,000+</div>
+</div>
+
+<div class="product-card">
+  <img src="led.png" alt="LED AQI Display">
+  <h3>LED AQI Display</h3>
+  <p>Outdoor LED display for AQI & environmental parameters visibility.</p>
+  <div class="price">₹70,000+</div>
+</div>
+
+<div class="product-card">
+  <img src="water.png" alt="Water OCEMS">
+  <h3>Water OCEMS</h3>
+  <p>Online effluent monitoring for pH, TSS, COD, BOD compliance.</p>
+  <div class="price">₹4,00,000+</div>
+</div>
+
+</div>
+</div>
+
+<!-- WHATSAPP -->
+<div class="whatsapp">
+<a href="https://wa.me/919860334224" target="_blank">
+Contact on WhatsApp
+</a>
+</div>
+
+<footer>
+© 2025 Dhayareshwar Labs. All rights reserved.
+</footer>
+
+</div>
 </body>
 </html>
