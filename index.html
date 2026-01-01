@@ -2,311 +2,64 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Dhayareshwar Labs | AQMS OCEMS Solutions</title>
+  <title>Dhayreshwar Labs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <!-- CSS START -->
   <style>
-    html {
-      scroll-behavior: smooth;
-    }
-
     body {
       margin: 0;
       font-family: Arial, sans-serif;
       background: #f4f6f8;
-      color: #333;
     }
 
     /* NAVBAR */
     .navbar {
-      position: sticky;
-      top: 0;
       background: #2c3e50;
-      padding: 14px;
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      z-index: 1000;
+      padding: 12px 0;
     }
 
-    .navbar a {
+    .nav-container {
+      max-width: 1000px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0 15px;
+    }
+
+    .nav-logo {
+      color: #fff;
+      font-size: 20px;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .nav-links {
+      list-style: none;
+      display: flex;
+      gap: 20px;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
       color: #fff;
       text-decoration: none;
       font-weight: bold;
     }
 
-    .navbar a:hover {
+    .nav-links a:hover {
       text-decoration: underline;
     }
 
-    /* SECTIONS FIX */
-    section {
-      padding: 70px 20px;
-      scroll-margin-top: 80px; /* IMPORTANT FIX */
-      background: #fff;
-      margin: 20px auto;
-      max-width: 1200px;
-      border-radius: 8px;
-    }
-
-    h1, h2 {
-      text-align: center;
-      color: #2c3e50;
-    }
-
-    p {
-      text-align: center;
-      line-height: 1.6;
-    }
-
-    /* PRODUCTS */
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .product {
-      border: 1px solid #ddd;
-      padding: 15px;
-      border-radius: 6px;
-      background: #fafafa;
-    }
-
-    .price {
-      color: green;
-      font-weight: bold;
-      text-align: center;
-      margin-top: 8px;
-    }
-
-    /* CONTACT */
-    .contact {
-      text-align: center;
-    }
-
-    .whatsapp {
-      display: inline-block;
-      margin-top: 15px;
-      background: #25d366;
-      color: #fff;
-      padding: 12px 22px;
-      border-radius: 6px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      color: #777;
-      font-size: 14px;
-    }
-  </style>
-</head>
-
-<body>
-
-<!-- NAVIGATION -->
-<nav class="navbar">
-  <a href="#home">Home</a>
-  <a href="#products">Products</a>
-  <a href="#services">Services</a>
-  <a href="#contact">Contact</a>
-</nav>
-
-<!-- HOME -->
-<section id="home">
-  <h1>Dhayareshwar Labs</h1>
-  <p><b>Environmental Monitoring & Compliance Solutions</b></p>
-  <p>
-    We provide CPCB / MPCB compliant AQMS, OCEMS, Water OCEMS
-    and LED AQI Display solutions for industries and projects
-    across Maharashtra.
-  </p>
-</section>
-
-<!-- PRODUCTS -->
-<section id="products">
-  <h2>Our Products</h2>
-
-  <div class="product-grid">
-
-    <div class="product">
-      <h3>AQI Monitoring System</h3>
-      <p>
-        Real-time Ambient Air Quality Monitoring System with
-        PM2.5, PM10 and gas sensors. Cloud dashboard supported.
-      </p>
-      <p class="price">Starting from ₹ 2,50,000</p>
-    </div>
-
-    <div class="product">
-      <h3>OCEMS System</h3>
-      <p>
-        Online Continuous Emission Monitoring System with
-        automatic data transfer to MPCB / CPCB servers.
-      </p>
-      <p class="price">Starting from ₹ 8,50,000</p>
-    </div>
-
-    <div class="product">
-      <h3>LED AQI Display Board</h3>
-      <p>
-        High brightness outdoor LED display for real-time AQI
-        and pollution parameter visibility.
-      </p>
-      <p class="price">₹ 80,000 – ₹ 1,20,000</p>
-    </div>
-
-    <div class="product">
-      <h3>Water OCEMS</h3>
-      <p>
-        Online Continuous Effluent Monitoring System for pH,
-        COD, BOD, TSS with secure data reporting.
-      </p>
-      <p class="price">Starting from ₹ 7,00,000</p>
-    </div>
-
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-  <h2>Our Services</h2>
-  <p>✔ AQMS & OCEMS Installation</p>
-  <p>✔ MPCB / CPCB Compliance Support</p>
-  <p>✔ Data Reporting & Calibration</p>
-  <p>✔ Annual Maintenance Contracts (AMC)</p>
-</section>
-
-<!-- CONTACT -->
-<section id="contact">
-  <h2>Contact Us</h2>
-  <div class="contact">
-    <p><b>Dhayareshwar Labs</b></p>
-    <p>📞 +91 98603 34224</p>
-    <p>📧 info@dhayareshwarlabs.online</p>
-    <p>📍 Maharashtra, India</p>
-
-    <a class="whatsapp"
-       href="https://wa.me/919860334224"
-       target="_blank">
-       Contact on WhatsApp
-    </a>
-  </div>
-</section>
-
-<footer>
-  © 2025 Dhayareshwar Labs. All rights reserved.
-</footer>
-
-</body>
-</html>
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.08);
-}
-
-.logo {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-.logo img {
-  max-width: 160px;
-  height: auto;
-}
-
-/* NAVBAR */
-  .navbar {
-  display: flex;
-  justify-content: center;
-  gap: 25px;
-  background: #2c3e50;
-  padding: 12px;
-}
-
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
-
-}
-
-.nav-container {
-  max-width: 900px;
-  margin: auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 15px;
-}
-
-.nav-logo a {
-  color: #fff;
-  font-size: 20px;
-  font-weight: bold;
-  text-decoration: none;
-}
-
-.nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links li {
-  margin-left: 20px;
-}
-
-.nav-links a {
-  color: #fff;
-  text-decoration: none;
-}
-
-@media (max-width: 600px) {
-  .nav-container {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .nav-links li {
-    margin: 0 15px;
-  }
-}
-    
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-    }
-
+    /* CONTAINER */
     .container {
-      max-width: 900px;
+      max-width: 1000px;
       margin: 20px auto;
-      background: #ffffff;
+      background: #fff;
       padding: 20px;
       border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.08);
-    }
-
-    .logo {
-      text-align: center;
-      margin-bottom: 15px;
-    }
-
-    .logo img {
-      max-width: 160px;
-      height: auto;
-      display: inline-block;
     }
 
     h1, h2 {
@@ -317,440 +70,100 @@
     p {
       text-align: center;
       color: #555;
-      line-height: 1.6;
     }
 
-    .services {
-      margin-top: 25px;
-    }
-
-    .services ul {
-      list-style: none;
-      padding: 0;
-      text-align: center;
-    }
-
-    .services li {
-      padding: 6px 0;
-      color: #333;
-    }
-
-    .whatsapp {
-      text-align: center;
+    /* PRODUCTS */
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
       margin-top: 30px;
     }
 
-    .whatsapp a {
-      background: #25d366;
-      color: #ffffff;
-      padding: 12px 22px;
-      text-decoration: none;
+    .product-card {
+      border: 1px solid #ddd;
+      padding: 15px;
       border-radius: 6px;
+      text-align: center;
+    }
+
+    .price {
+      color: green;
       font-weight: bold;
-      display: inline-block;
+      margin-top: 8px;
     }
 
-    .whatsapp a:hover {
-      background: #1ebe5d;
-    }
-
+    /* FOOTER */
     footer {
       text-align: center;
-      margin-top: 30px;
+      margin: 30px 0;
       color: #777;
       font-size: 14px;
     }
-    .products {
-  margin-top: 30px;
-}
 
-.product-grid {
-  display: grid;
-  gap: 20px;
-}
-
-.product-card {
-  border: 1px solid #ddd;
-  padding: 12px;
-  border-radius: 6px;
-}
-
-.product-card img {
-  width: 100%;
-  max-height: 160px;
-  object-fit: contain;
-}
-
-.price {
-  color: green;
-  font-weight: bold;
-  text-align: center;
-  margin-top: 8px;
-}
-
-  </style>
-</head>
-
-<body>
-  <nav class="navbar">
-  <div class="nav-container">
-    <div class="nav-logo">
-      <a href="index.html">Dhayareshwar Labs</a>
-    </div>
-    <ul class="nav-links">
-      <nav class="navbar">
-  <a href="index.html">Home</a>
-  <a href="products.html">Products</a>
-  <a href="services.html">Services</a>
-  <a href="contact.html">Contact</a>
-</nav>
-      .n<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Products | Dhayareshwar Labs</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 20px auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-    }
-
-    h1 {
-      text-align: center;
-      color: #2c3e50;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .product {
-      border: 1px solid #ddd;
-      padding: 15px;
-      border-radius: 6px;
-    }
-
-    .product h2 {
-      color: #1f3c88;
-      font-size: 18px;
-    }
-
-    .price {
-      color: green;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-
-    .back {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    a {
-      text-decoration: none;
-      color: #1f3c88;
-      font-weight: bold;
+    /* MOBILE */
+    @media (max-width: 600px) {
+      .nav-links {
+        gap: 12px;
+        font-size: 14px;
+      }
     }
   </style>
+  <!-- CSS END -->
+
 </head>
 
 <body>
 
-<div class="container">
-  <h1>Our Products</h1>
-
-  <div class="product-grid">
-
-    <div class="product">
-      <h2>AQI Monitoring System</h2>
-      <p>
-        Real-time Ambient Air Quality Monitoring System with PM2.5, PM10,
-        SO2 and NO2 sensors. Suitable for MPCB & CPCB compliance.
-      </p>
-      <p class="price">Price: ₹1,20,000 onwards</p>
-    </div>
-
-    <div class="product">
-      <h2>OCEMS System</h2>
-      <p>
-        Online Continuous Emission Monitoring System with automatic data
-        transfer to MPCB servers as per NGT norms.
-      </p>
-      <p class="price">Price: ₹3,50,000 onwards</p>
-    </div>
-
-    <div class="product">
-      <h2>LED AQI Display Board</h2>
-      <p>
-        Outdoor LED display for live AQI data at construction sites
-        and industrial locations.
-      </p>
-      <p class="price">Price: ₹85,000 onwards</p>
-    </div>
-
-    <div class="product">
-      <h2>Water OCEMS</h2>
-      <p>
-        Online Effluent Monitoring System for pH, COD, BOD, TSS with
-        cloud & MPCB connectivity.
-      </p>
-      <p class="price">Price: ₹4,50,000 onwards</p>
-    </div>
-
-  </div>
-
-  <div class="back">
-    <a href="index.html">← Back to Home</a>
-  </div>
-
-</div>
-
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Products | Dhayareshwar Labs</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background: #f4f6f8;
-      margin: 0;
-      padding: 0;
-    }
-
-    .container {
-      max-width: 1200px;
-      margin: 20px auto;
-      background: #fff;
-      padding: 20px;
-      border-radius: 8px;
-    }
-
-    h1 {
-      text-align: center;
-      color: #2c3e50;
-    }
-
-    .product-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
-
-    .product {
-      border: 1px solid #ddd;
-      padding: 15px;
-      border-radius: 6px;
-    }
-
-    .product h2 {
-      color: #1f3c88;
-      font-size: 18px;
-    }
-
-    .price {
-      color: green;
-      font-weight: bold;
-      margin-top: 10px;
-    }
-
-    .back {
-      text-align: center;
-      margin-top: 30px;
-    }
-
-    a {
-      text-decoration: none;
-      color: #1f3c88;
-      font-weight: bold;
-    }
-  </style>
-</head>
-
-<body>
-
-<div class="container">
-  <h1>Our Products</h1>
-
-  <div class="product-grid">
-
-    <div class="product">
-      <h2>AQI Monitoring System</h2>
-      <p>
-        Real-time Ambient Air Quality Monitoring System with PM2.5, PM10,
-        SO2 and NO2 sensors. Suitable for MPCB & CPCB compliance.
-      </p>
-      <p class="price">Price: ₹1,20,000 onwards</p>
-    </div>
-
-    <div class="product">
-      <h2>OCEMS System</h2>
-      <p>
-        Online Continuous Emission Monitoring System with automatic data
-        transfer to MPCB servers as per NGT norms.
-      </p>
-      <p class="price">Price: ₹3,50,000 onwards</p>
-    </div>
-
-    <div class="product">
-      <h2>LED AQI Display Board</h2>
-      <p>
-        Outdoor LED display for live AQI data at construction sites
-        and industrial locations.
-      </p>
-      <p class="price">Price: ₹85,000 onwards</p>
-    </div>
-
-    <div class="product">
-      <h2>Water OCEMS</h2>
-      <p>
-        Online Effluent Monitoring System for pH, COD, BOD, TSS with
-        cloud & MPCB connectivity.
-      </p>
-      <p class="price">Price: ₹4,50,000 onwards</p>
-    </div>
-
-  </div>
-
-  <div class="back">
-    <a href="index.html">← Back to Home</a>
-  </div>
-
-</div>
-
-</body>
-</html
-  </div>
-</nav>
-
-  <div class="container">
-
-    <!-- LOGO -->
-    <div class="logo">
-      <img src="Logo.jpg" alt="Dhayareshwar Labs Logo">
-    </div>
-
-    <!-- TITLE -->
-    <h1>Dhayareshwar Labs</h1>
-    <p>Environmental Testing & Monitoring Solutions</p>
-
-    <!-- ABOUT -->
-    <h2>About Us</h2>
-    <p>
-      Dhayareshwar Labs provides reliable environmental monitoring,
-      air quality analysis, and compliance support for industries
-      as per MPCB / CPCB guidelines.
-    </p>
-
-    <!-- SERVICES -->
-    <div class="services">
-      <h2>Our Services</h2>
-      <ul>
-        <li>Ambient Air Quality Monitoring AQI</li>
-        <li>OCEMS & AQMS Software Support</li>
-        <li>Stack & Emission Monitoring online Sensor</li>
-        <li>Environmental Compliance Consulting MPCB</li>
-        <li>Report Generation & Data Analysis</li>
-        <li>Led display AQI & Data Support</li>
+  <!-- NAVBAR -->
+  <div class="navbar">
+    <div class="nav-container">
+      <a class="nav-logo" href="index.html">Dhayreshwar Labs</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
+    </div>
   </div>
-    <div class="products">
-  <h2>Our Products</h2>
 
-  <div class="product-grid">
+  <!-- CONTENT -->
+  <div class="container">
+    <h1>Our Products</h1>
 
-    <div class="product-card">
-      <img src="aqi.jpg" alt="AQI Monitoring System">
-      <h3>AQI Monitoring System</h3>
-      <p>
-       The Air Quality Monitoring System (AQMS) is an advanced, reliable solution designed to continuously monitor ambient air quality in real time. The system accurately measures particulate matter (PM2.5 and PM10) along with key gaseous pollutants to provide precise and actionable air quality data.
-       AQMS is widely used across industrial facilities, construction sites, residential areas, smart city projects, highways, and public spaces. The system ensures continuous data acquisition, storage, and visualization through a cloud-based dashboard, enabling users to monitor air quality remotely via web or mobile platforms.
-      </p>
-      <div class="price">₹ 2,50,000 /- (Starting)</div>
-    </div>
+    <div class="product-grid">
 
-    <div class="product-card">
-      <img src="ocems.jpg" alt="OCEMS System">
-      <h3>OCEMS System</h3>
-      <p>
-      The Online Continuous Emission Monitoring System (OCEMS) is a regulatory-compliant solution designed to continuously monitor stack emissions from industrial processes in real time. The system measures critical emission parameters and automatically transmits validated data to the CPCB / SPCB (MPCB) servers as per statutory requirements
-      OCEMS ensures transparent, tamper-resistant, and uninterrupted monitoring of industrial emissions. The system consists of certified gas analyzers, particulate monitors, data acquisition systems (DAS), and secure communication modules to provide accurate and reliable emission data.
-      </p>
-      <div class="price">₹ 3,50,000 /- (Approx)</div>
-    </div>
+      <div class="product-card">
+        <h3>AQI Monitoring System</h3>
+        <p>Real-time air quality monitoring as per CPCB norms.</p>
+        <div class="price">₹ 1,25,000</div>
+      </div>
 
-    <div class="product-card">
-      <img src="ledaqi.jpg" alt="LED AQI Display">
-      <h3>LED AQI Display Board</h3>
-      <p>
-        The LED AQI Display Board is a high-visibility digital display solution designed to show real-time Air Quality Index (AQI) and pollutant data for public awareness and regulatory compliance. The display receives live data from AQI Monitoring Systems or cloud servers and presents it in a clear, readable format for outdoor and indoor installations.
-        The LED AQI Display Board is widely installed at industrial gates, construction sites, public places, residential societies, smart city projects, and highways to inform the public about current air quality conditions
-      </p>
-      <div class="price">₹ 80,000 – ₹ 1,20,000 /-</div>
-    </div>
+      <div class="product-card">
+        <h3>OCEMS System</h3>
+        <p>Continuous emission monitoring with cloud reporting.</p>
+        <div class="price">₹ 3,50,000</div>
+      </div>
 
-    <div class="product-card">
-      <img src="waterocems.jpg" alt="Water OCEMS">
-      <h3>Water OCEMS System</h3>
-      <p>
-        The Water OCEMS (Online Continuous Effluent Monitoring System) is an automated, regulatory-compliant solution designed to continuously monitor industrial effluent and wastewater discharge parameters in real time. The system measures key water quality parameters and securely transmits data to CPCB / SPCB (MPCB) servers as per statutory guidelines.
-        Water OCEMS ensures continuous, transparent, and tamper-proof monitoring of treated effluent from industries. The system includes certified online analyzers, sensors, a data acquisition system (DAS), and a secure communication module for accurate data capture and reporting.
-      </p>
-      <div class="price">₹ 2,00,000 /- (Starting)</div>
-    </div>
+      <div class="product-card">
+        <h3>LED AQI Display</h3>
+        <p>Outdoor LED display for public AQI visibility.</p>
+        <div class="price">₹ 85,000</div>
+      </div>
 
-  </div><div style="text-align:center;margin-top:30px;">
-  <a href="AQI Display_Technical_Specification.pdf" 
-     target="_blank"
-     style="background:#2c3e50;color:#fff;padding:12px 20px;
-            text-decoration:none;border-radius:6px;font-weight:bold;">
-    Download AQMS Brochure (PDF)
-  </a>
-</div>
-
-</div>
-
-    <!-- WHATSAPP -->
-    <div class="whatsapp">
-      <a href="https://wa.me/919860334224" target="_blank">
-        Contact on WhatsApp
-      </a>
-    </div>
-      <p>
-📞 Call Us:
-<a href="tel:+919860334224">+91 98603 34224</a>
-</p>
+      <div class="product-card">
+        <h3>Water OCEMS</h3>
+        <p>Online water quality monitoring system.</p>
+        <div class="price">₹ 2,80,000</div>
+      </div>
 
     </div>
-    <p style="text-align:center;">
-    <a href="services.html"><b>View All Services →</b></a>
-    </p>
-
-    <footer>
-      © 2025 Dhayareshwar Labs. All rights reserved.
-    </footer>
-
   </div>
+
+  <footer>
+    © 2025 Dhayreshwar Labs. All rights reserved.
+  </footer>
 
 </body>
 </html>
