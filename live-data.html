@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Live OCEMS Data | Dhayareshwar Labs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<style>
+body{font-family:Arial;background:#f4f6f8;margin:0}
+.container{max-width:900px;margin:30px auto;background:#fff;padding:20px;border-radius:10px}
+h2{text-align:center}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:15px}
+.card{background:#eef3ff;padding:15px;border-radius:8px;text-align:center}
+.value{font-size:28px;font-weight:bold;color:#0a7cff}
+.time{margin-top:15px;color:#555;text-align:center}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h2>📡 Live OCEMS / AQI Data</h2>
+
+<div class="grid">
+  <div class="card">PM2.5<br><span class="value" id="pm25">--</span> µg/m³</div>
+  <div class="card">PM10<br><span class="value" id="pm10">--</span> µg/m³</div>
+  <div class="card">SO₂<br><span class="value" id="so2">--</span> µg/m³</div>
+  <div class="card">NOx<br><span class="value" id="nox">--</span> µg/m³</div>
+  <div class="card">pH<br><span class="value" id="ph">--</span></div>
+  <div class="card">Flow<br><span class="value" id="flow">--</span> m³/hr</div>
+</div>
+
+<div class="time" id="time">Last update: --</div>
+</div>
+
+<script>
+function loadData(){
+
+/* 🔴 Replace this URL with your real API */
+fetch("https://api.jsonbin.io/v3/b/64f000000000000000000")  
+
+.then(res=>res.json())
+.then(d=>{
+
+// DEMO data (remove this when real API ready)
+const data={
+ pm25:(Math.random()*120).toFixed(1),
+ pm10:(Math.random()*200).toFixed(1),
+ so2:(Math.random()*80).toFixed(1),
+ nox:(Math.random()*90).toFixed(1),
+ ph:(6+Math.random()*2).toFixed(2),
+ flow:(Math.random()*50).toFixed(1)
+};
+
+document.getElementById("pm25").innerText=data.pm25;
+document.getElementById("pm10").innerText=data.pm10;
+document.getElementById("so2").innerText=data.so2;
+document.getElementById("nox").innerText=data.nox;
+document.getElementById("ph").innerText=data.ph;
+document.getElementById("flow").innerText=data.flow;
+
+document.getElementById("time").innerText=
+"Last update: "+new Date().toLocaleString();
+
+})
+.catch(()=>console.log("Waiting for data..."));
+}
+
+// refresh every 10 seconds
+setInterval(loadData,10000);
+loadData();
+</script>
+
+</body>
+</html>
