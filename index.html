@@ -208,6 +208,47 @@ Contact on WhatsApp
 <footer>
 © 2025 Dhayareshwar Labs. All rights reserved.
 </footer>
+<!-- Cookie Consent Banner -->
+<div id="cookieConsent" style="
+position:fixed;
+bottom:0;
+left:0;
+width:100%;
+background:#222;
+color:#fff;
+padding:15px;
+text-align:center;
+font-size:14px;
+z-index:9999;
+display:none;
+">
+  We use cookies to improve your experience and analyze website traffic.
+  <a href="/privacy-policy" style="color:#4da6ff;text-decoration:underline;">
+    Privacy Policy
+  </a>
+  <button onclick="acceptCookies()" style="
+    margin-left:10px;
+    padding:6px 14px;
+    background:#28a745;
+    color:#fff;
+    border:none;
+    cursor:pointer;
+    border-radius:4px;
+  ">Accept</button>
+</div>
+
+<script>
+function acceptCookies() {
+  localStorage.setItem("cookieAccepted", "yes");
+  document.getElementById("cookieConsent").style.display = "none";
+}
+
+window.onload = function() {
+  if (!localStorage.getItem("cookieAccepted")) {
+    document.getElementById("cookieConsent").style.display = "block";
+  }
+};
+</script>
 
 </div>
 </body>
