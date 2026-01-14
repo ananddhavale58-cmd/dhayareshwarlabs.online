@@ -66,7 +66,7 @@ document.getElementById("time").innerText=
 .catch(()=>console.log("Waiting for data..."));
 }
 
-// refresh every 10 seconds
+// refresh every 5 seconds
 setInterval(loadData,10000);
 loadData();
 </script>
@@ -95,7 +95,7 @@ loadData();
   grid-auto-flow:column;
   grid-auto-columns:280px;
   gap:20px;
-  animation: sponsorScroll 25s linear infinite;
+  animation: sponsorScroll 10s linear infinite;
 }
 
 .sponsor-slider:hover{
@@ -125,7 +125,7 @@ loadData();
 @media(max-width:600px){
   .sponsor-slider{
     grid-auto-columns:220px;
-    animation-duration:35s;
+    animation-duration:15s;
   }
 }
 </style>
