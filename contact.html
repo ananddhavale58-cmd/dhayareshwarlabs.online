@@ -85,6 +85,15 @@ button:hover {
     }
 </style>
 </head>
+  <div id="navbar-placeholder"></div>
+
+<script>
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+    });
+</script>
 
 <body>
 
