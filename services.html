@@ -21,7 +21,16 @@
       border-radius: 8px;
       box-shadow: 0 0 10px rgba(0,0,0,0.08);
     }
+    <!-- Place this in each page where navbar should appear -->
+<div id="navbar-placeholder"></div>
 
+<script>
+  fetch('navbar.html')
+    .then(response => response.text())
+    .then(data => {
+      document.getElementById('navbar-placeholder').innerHTML = data;
+    });
+</script>
     /* navbar styles */
 .navbar {
   background-color: #2c3e50; /* dark blue/gray */
