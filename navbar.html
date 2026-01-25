@@ -1,59 +1,45 @@
 <style>
-.navbar {
-  background: #222;
-  padding: 10px;
-}
-
 .menu-btn {
-  font-size: 26px;
-  color: #fff;
+  font-size: 22px;
   cursor: pointer;
-  display: none;
+  padding: 10px;
+  background: #111;
+  color: #fff;
 }
 
 .nav-links {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+  display: none;
+  background: #111;
 }
 
 .nav-links a {
+  display: block;
   color: white;
+  padding: 12px;
   text-decoration: none;
-  font-weight: bold;
+  border-bottom: 1px solid #333;
 }
 
-/* Mobile */
-@media (max-width: 768px) {
-  .menu-btn {
-    display: block;
-  }
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    margin-top: 10px;
-  }
-  .nav-links.show {
-    display: flex;
-  }
+.nav-links a:hover {
+  background: #333;
 }
 </style>
 
-<div class="navbar">
-  <span class="menu-btn" onclick="toggleMenu()">☰ Menu</span>
-  <ul class="nav-links" id="navLinks">
-    <li><a href="/index.html">Home</a></li>
-    <li><a href="/products.html">Products</a></li>
-    <li><a href="/services.html">Services</a></li>
-    <li><a href="/contact.html">Contact</a></li>
-    <li><a href="/client-report.html">Client Login</a></li>
-    <li><a href="/live-data.html">Live Data</a></li>
-  </ul>
+<div class="menu-btn" onclick="toggleMenu()">☰ Menu</div>
+
+<div class="nav-links" id="navLinks">
+  <a href="/index.html">Home</a>
+  <a href="/products.html">Products</a>
+  <a href="/services.html">Services</a>
+  <a href="/contact.html">Contact</a>
+  <a href="/client.html">Client Login</a>
+  <a href="/live.html">Live Data</a>
 </div>
 
 <script>
 function toggleMenu() {
-  document.getElementById("navLinks").classList.toggle("show");
+  var nav = document.getElementById("navLinks");
+  nav.style.display = (nav.style.display === "block") ? "none" : "block";
 }
 </script>
 
