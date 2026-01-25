@@ -17,6 +17,20 @@ h2{text-align:center}
 </head>
 
 <body>
+  <script>
+fetch('/navbar.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('navbar').innerHTML = data;
+
+    // Now attach click
+    document.getElementById("menuBtn").onclick = function() {
+      var nav = document.getElementById("navLinks");
+      nav.style.display = (nav.style.display === "block") ? "none" : "block";
+    };
+  });
+</script>
+
 
 <div class="container">
 <h2>📡 Live AQI Data</h2>
