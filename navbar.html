@@ -1,10 +1,59 @@
-<!-- navbar.html -->
-<nav class="navbar">
-  <ul>
-    <li><a href="/index.html">Home</a></li>
-    <li><a href="/products.html">Products</a></li>
-    <li><a href="/services.html">Services</a></li>
-    <li><a href="/contact.html">Contact</a></li>
-    <li><a href="/login.html">Client Login</a></li>
+<style>
+.navbar {
+  background: #222;
+  padding: 10px;
+}
+
+.menu-btn {
+  font-size: 26px;
+  color: #fff;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .menu-btn {
+    display: block;
+  }
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    margin-top: 10px;
+  }
+  .nav-links.show {
+    display: flex;
+  }
+}
+</style>
+
+<div class="navbar">
+  <span class="menu-btn" onclick="toggleMenu()">☰ Menu</span>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="/public/index.html">Home</a></li>
+    <li><a href="/public/products.html">Products</a></li>
+    <li><a href="/public/services.html">Services</a></li>
+    <li><a href="/public/contact.html">Contact</a></li>
+    <li><a href="/public/client-report.html">Client Login</a></li>
+    <li><a href="/public/live-data.html">Live Data</a></li>
   </ul>
-</nav>
+</div>
+
+<script>
+function toggleMenu() {
+  document.getElementById("navLinks").classList.toggle("show");
+}
+</script>
+
