@@ -381,4 +381,18 @@ window.onload = function() {
 
 </div>
 </body>
+  <script>
+fetch('/navbar.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('navbar').innerHTML = data;
+
+    document.getElementById("menuBtn").onclick = function() {
+      var nav = document.getElementById("navLinks");
+      nav.style.display = (nav.style.display === "block") ? "none" : "block";
+    };
+  });
+</script>
+<div>
+</div>
 </html>
