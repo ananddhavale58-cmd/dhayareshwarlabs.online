@@ -8,78 +8,52 @@
   <meta name="keywords" content="AQMS, BRSR, EPR, ESG, AQI Monitoring System, GHG, LED AQI Display, ETP/STP, MPCB CPCB">
 
   <style>
-    /* RESET */
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+    /.navbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  background:#0a3d62;
+  padding:10px 15px;
+}
 
-    /* FULL SCREEN BACKGROUND */
-    body {
-      min-height: 100vh;
-      font-family: Arial, sans-serif;
-      background: 
-        linear-gradient(rgba(255,255,255,0.85), rgba(255,255,255,0.85)),
-        url("bg.jpg") no-repeat center center fixed;
-      background-size: cover;
-    }
+.navbar .logo{
+  color:white;
+  font-weight:bold;
+  font-size:18px;
+}
 
-    /* MAIN CONTENT BOX */
-    .container {
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px 20px;
-      text-align: center;
-    }
+.navbar ul{
+  list-style:none;
+  display:flex;
+  margin:0;
+  padding:0;
+}
 
-    .logo {
-      width: 120px;
-      margin-bottom: 20px;
-    }
+.navbar ul li{
+  margin-left:15px;
+}
 
-    h1 {
-      margin-bottom: 10px;
-    }
+.navbar ul li a{
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+}
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-      margin-top: 30px;
-    }
+/* Mobile */
+@media(max-width:600px){
+  .navbar{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+  .navbar ul{
+    flex-wrap:wrap;
+  }
+  .navbar ul li{
+    margin:5px 10px;
+  }
+}
 
-    .card {
-      background: white;
-      padding: 15px;
-      border-radius: 12px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .card img {
-      width: 100%;
-      border-radius: 8px;
-    }
-
-    .menu-btn {
-      margin-top: 30px;
-      padding: 12px 25px;
-      background: #2c7be5;
-      color: white;
-      border: none;
-      border-radius: 8px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-  </style>
-    </div>
-
-    <button class="menu-btn">Menu</button>
-  </div>
-
-</body>
-</html>
-
+</style>
 
    <!-- NAVIGATION -->
    <div class="navbar">
