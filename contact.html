@@ -85,17 +85,20 @@ button:hover {
     }
 </style>
 </head>
-  <div id="navbar-placeholder"></div>
-
-<script>
-  fetch('navbar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbar-placeholder').innerHTML = data;
-    });
-</script>
-
 <body>
+  <script>
+fetch('/navbar.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('navbar').innerHTML = data;
+
+    // Now attach click
+    document.getElementById("menuBtn").onclick = function() {
+      var nav = document.getElementById("navLinks");
+      nav.style.display = (nav.style.display === "block") ? "none" : "block";
+    };
+  });
+</script>
 
 <div class="container">
 <h2>Contact Us</h2>
