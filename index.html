@@ -15,7 +15,41 @@
       font-family: Arial, sans-serif;
       background: #f4f6f8;
     }
+    <style>
+/* HERO BACKGROUND */
+.hero {
+  height: 300px;
+  background: url('/bg.jpg') no-repeat center center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+}
+
+/* OPTIONAL DARK OVERLAY */
+.hero::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 300px;
+  background: rgba(0,0,0,0.4);
+}
+
+.hero * {
+  position: relative;
+  z-index: 1;
+}
+</style>
+
     /* ===== NAVBAR ===== */
+  <div class="hero">
+  <h1>Dhayareshwar Labs</h1>
+  <p>Environmental Monitoring Solutions</p>
+</div>
+
 .navbar {
   position: fixed;
   top: 0;
