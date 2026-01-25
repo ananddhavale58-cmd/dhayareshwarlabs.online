@@ -87,18 +87,22 @@ footer{
 }
 </style>
 </head>
-
 <body>
+  <script>
+fetch('/navbar.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('navbar').innerHTML = data;
 
-<!-- NAVBAR -->
-<div class="navbar">
-  <ul>
-    <li><a href="index.html">Home</a></li>
-    <li><a href="products.html">Products</a></li>
-    <li><a href="services.html">Services</a></li>
-    <li><a href="contact.html">Contact</a></li>
-  </ul>
-</div>
+    // Now attach click
+    document.getElementById("menuBtn").onclick = function() {
+      var nav = document.getElementById("navLinks");
+      nav.style.display = (nav.style.display === "block") ? "none" : "block";
+    };
+  });
+</script>
+
+
 
 <div class="container">
 
