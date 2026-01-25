@@ -19,13 +19,9 @@
   text-decoration: none;
   border-bottom: 1px solid #333;
 }
-
-.nav-links a:hover {
-  background: #333;
-}
 </style>
 
-<div class="menu-btn" onclick="toggleMenu()">☰ Menu</div>
+<div class="menu-btn" id="menuBtn">☰ Menu</div>
 
 <div class="nav-links" id="navLinks">
   <a href="/index.html">Home</a>
@@ -35,11 +31,3 @@
   <a href="/client.html">Client Login</a>
   <a href="/live.html">Live Data</a>
 </div>
-
-<script>
-function toggleMenu() {
-  var nav = document.getElementById("navLinks");
-  nav.style.display = (nav.style.display === "block") ? "none" : "block";
-}
-</script>
-
