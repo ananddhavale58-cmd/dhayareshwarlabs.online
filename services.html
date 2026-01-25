@@ -113,15 +113,15 @@
   </style>
 </head>
 <body>
-<div id="navbar-placeholder"></div>
-
+  <div id="navbar"></div>
 <script>
-  fetch('navbar.html')
-    .then(response => response.text())
-    .then(data => {
-      document.getElementById('navbar-placeholder').innerHTML = data;
-    });
+fetch('/navbar.html')
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById('navbar').innerHTML = data;
+  });
 </script>
+
 
   <div class="container">
 
