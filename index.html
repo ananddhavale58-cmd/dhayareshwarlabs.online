@@ -8,40 +8,25 @@
   <meta name="keywords" content="AQMS, BRSR, EPR, ESG, AQI Monitoring System, GHG, LED AQI Display, ETP/STP, MPCB CPCB">
 
   <style>
-  /.navbar{
+    .navbar{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  background:#198754;
-  padding:10px 15px;
-}
-    .navbar{
+  padding:16px 24px;
   background:linear-gradient(90deg,#0a7d5a,#0a3d62);
 }
-
 .navbar .logo{
-  color:black;
+  color:white;
   font-weight:bold;
   font-size:18px;
 }
 
-.navbar ul{
-  list-style:none;
-  display:flex;
-  margin:0;
-  padding:0;
-}
-
-.navbar ul li{
-  margin-left:15px;
-}
-
 .navbar ul li a{
-  color:black;
+  color:white;
   text-decoration:none;
   font-size:14px;
 }
-
+    
 /* Mobile */
 @media(max-width:600px){
   .navbar{
@@ -60,6 +45,21 @@
   height:180px;        /* LIMIT HEIGHT */
   object-fit:cover;   /* CROP nicely */
   border-radius:8px;
+}
+    .zoom{ cursor:pointer; }
+
+    .img-modal{
+  display:none;
+  position:fixed;
+  top:0; left:0; right:0; bottom:0;
+  background:rgba(0,0,0,0.9);
+  z-index:99999;
+  justify-content:center;
+  align-items:center;
+}
+.img-modal img{
+  max-width:95%;
+  max-height:95%;
 }
 
 </style>
@@ -181,34 +181,34 @@ Environmental Monitoring • AQI • AQMS • BRSR & GHG
 
     <!-- Card 1 -->
     <div class="sponsor-card">
-      <img src="aqi.png">
+      <img src="aqi.png" class="zoom" onclick="openImg(this.src)">
       <strong>AQI Display System</strong><br>
       <small>Industrial Grade</small>
     </div>
 
     <!-- Card 2 -->
     <div class="sponsor-card">
-      <img src="ocems.png">
+      <img src="ocems.png" class="zoom" onclick="openImg(this.src)">
       <strong>OCEMS Solution</strong><br>
       <small>CPCB / MPCB Ready</small>
     </div>
 
     <!-- Card 3 -->
     <div class="sponsor-card">
-      <img src="led1.png">
+      <img src="led1.png" class="zoom" onclick="openImg(this.src)">
       <strong>LED Display Boards</strong><br>
       <small>Outdoor & Indoor</small>
     </div>
 
     <!-- DUPLICATE FOR SMOOTH LOOP -->
     <div class="sponsor-card">
-      <img src="aqi.png">
+      <img src="aqi.png" class="zoom" onclick="openImg(this.src)">
       <strong>AQI Display System</strong><br>
       <small>Industrial Grade</small>
     </div>
 
     <div class="sponsor-card">
-      <img src="ocems.png">
+      <img src="ocems.png" class="zoom" onclick="openImg(this.src)">
       <strong>OCEMS Solution</strong><br>
       <small>CPCB / MPCB Ready</small>
     </div>
@@ -294,6 +294,18 @@ window.onload = function() {
 </script>
 
 </div>
+  <!-- Image Modal -->
+<div id="imgModal" class="img-modal" onclick="this.style.display='none'">
+  <img id="modalImg">
+</div>
+
+<script>
+function openImg(src){
+  document.getElementById("modalImg").src = src;
+  document.getElementById("imgModal").style.display = "flex";
+}
+</script>
+
 </body>
 <div>
 </html>
