@@ -191,13 +191,6 @@ Environmental Monitoring • AQI • AQMS • BRSR & GHG
       <small>Outdoor & Indoor</small>
     </div>
 
-    <!-- Card 4 -->
-    <div class="sponsor-card">
-      <img src="logo.jpg">
-      <strong>Environmental Services</strong><br>
-      <small>Compliance & Monitoring</small>
-    </div>
-
     <!-- DUPLICATE FOR SMOOTH LOOP -->
     <div class="sponsor-card">
       <img src="aqi.png">
@@ -293,19 +286,5 @@ window.onload = function() {
 
 </div>
 </body>
-  <div id="navbar"></div>
-  <script>
-fetch('/navbar.html')
-  .then(res => res.text())
-  .then(data => {
-    document.getElementById('navbar').innerHTML = data;
-
-    document.getElementById("menuBtn").onclick = function() {
-      var nav = document.getElementById("navLinks");
-      nav.style.display = (nav.style.display === "block") ? "none" : "block";
-    };
-  });
-</script>
 <div>
-</div>
 </html>
