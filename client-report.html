@@ -76,5 +76,77 @@ window.open("https://wa.me/?text="+encodeURIComponent(msg));
 }
 </script>
 
+<div style="max-width:420px;margin:auto;background:white;padding:25px;border-radius:10px;box-shadow:0 0 10px #ccc;text-align:center;">
+
+<h2>Report Verification</h2>
+
+<input id="reportNo" placeholder="Enter Report Number"
+style="width:80%;padding:10px;margin-top:10px;font-size:16px;">
+
+<br>
+
+<button onclick="verify()"
+style="padding:10px 20px;margin-top:10px;background:#0a7cff;color:white;border:none;cursor:pointer;">
+Verify
+</button>
+
+<div id="result" style="margin-top:20px;font-size:18px;"></div>
+
+</div>
+
+
+<script>
+
+const sheetURL =
+"https://docs.google.com/spreadsheets/d/1i3ejcBUBOqNgdylttEKebp9tcHDx4RXkXKbsbUEqkOY/gviz/tq?tqx=out:csv";
+
+async function verify(){
+
+let report =
+document.getElementById("reportNo").value.trim().toUpperCase();
+
+let res = await fetch(sheetURL);
+let data = await res.text();
+
+let rows = data.split("\n");
+
+let found=null;
+
+for(let i=1;i<rows.length;i++){
+
+let cols=rows[i].split(",");
+
+let rno=cols[0].replace(/"/g,"").trim().toUpperCase();
+
+if(rno===report){
+
+found=cols;
+break;
+
+}
+
+}
+
+if(found){
+
+document.getElementById("result").innerHTML=
+
+"✅ <b>Report Verified</b><br><br>"+
+"Client Name: "+found[1]+"<br>"+
+"Report Date: "+found[2]+"<br>"+
+"Valid Till: "+found[3];
+
+}
+
+else{
+
+document.getElementById("result").innerHTML="❌ Report Not Found";
+
+}
+
+}
+
+</script>
 </body>
+  
 </html>
